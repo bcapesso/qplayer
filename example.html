@@ -3,25 +3,27 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
-  <title>Prayer test</title>
+  <title>qPlayer Example</title>
 
-  <link href="fonts/himalaya.css" rel="stylesheet" type="text/css" />
-  <link href="css/qplayer-default.css" rel="stylesheet" type="text/css" />
-  <link href="css/prayer.css" rel="stylesheet" type="text/css" />
+  <link href="src/css/qplayer-default.css" rel="stylesheet" type="text/css" />
+  <link href="example.css" rel="stylesheet" type="text/css" />
 
-  <script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
-  <script type='text/javascript' src='js/jquery.jplayer.min.js'></script>
-  <script type='text/javascript' src='js/mustache.js'></script>
-  <script type='text/javascript' src='js/qplayer.js'></script>
+  <script type="text/javascript" src="src/js/jquery-1.10.1.min.js"></script>
+  <script type='text/javascript' src='src/js/jquery.jplayer.min.js'></script>
+  <script type='text/javascript' src='src/js/mustache.js'></script>
+  <script type='text/javascript' src='src/js/qplayer.js'></script>
   
   <script id="qPlayerTpl" type="text/template">
     
-		<div id="{{playerId}}" class="captions">
+		<div id="{{playerId}}" class="qplayer_container">
       <div class="jp-no-solution">
         <span>Update Required</span>
         To play the media you will need to either update your browser to a recent version or update your <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>.
       </div>
-      <div class="line"></div>
+      <div class="cue_lines">
+        <div class="cue_line myline1"><span class="content"></span></div>
+        <div class="cue_line myline2"><span class="content"></span></div>
+      </div>
       <div class="jp-gui jp-interface">
         <div class="jp-progress">
           <div class="jp-seek-bar" title="Seek">
@@ -43,8 +45,8 @@
           <li><a href="javascript:;" class="jp-unmute" tabindex="1" title="unmute">unmute</a></li>
           <li><a href="javascript:;" class="jp-repeat" tabindex="1" title="repeat">repeat</a></li>
           <li><a href="javascript:;" class="jp-repeat-off" tabindex="1" title="repeat off">repeat off</a></li>
-          <li><a href="javascript:;" class="qp-tibetan" tabindex="1" title="tibetan">tibetan</a></li>
-          <li><a href="javascript:;" class="qp-tibetan-off" tabindex="1" title="tibetan off">tibetan off</a></li>
+          <li><a href="javascript:;" class="qp-myline1" tabindex="1" title="Line 1">line1</a></li>
+          <li><a href="javascript:;" class="qp-myline1-off" tabindex="1" title="Turn line 1 off">line1 off</a></li>
         </ul>
       </div>
       {{#showDownload}}
@@ -61,9 +63,23 @@
   <!-- this is it. All you have to do is add a link to the mp3 with the class qPlayer.
        The script will load the captions from the same file but with extension .json
        If you dont have javascript, the .mp3 can still be downloaded
-  -->
-  <a class="qPlayer" href="prayer1.mp3">prayer1.mp3</a>
   
+       if you leave out the data-config-url attribute qPlayer will automatically try and load the data
+       from the same location as the media url with the extension replaced by .json
+  
+  
+  -->
+  <a class="qPlayer" 
+     href="http://www.jplayer.org/audio/m4a/TSP-01-Cro_magnon_man.m4a"
+     data-config-url="example.json" 
+     >TSP-01-Cro_magnon_man.m4a</a>
+  
+
+  <!-- we can create another player and customize it, we can potentially change parameters by using data attributes -->
+    <a class="qPlayer" 
+     href="http://www.jplayer.org/audio/m4a/TSP-01-Cro_magnon_man.m4a"
+     data-config-url="example2.json"
+     >TSP-01-Cro_magnon_man.m4a</a>
 
 </body>
 </html>

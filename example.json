@@ -1,0 +1,31 @@
+{
+  "toggles": ["myline1"],
+  "cues": [ 
+    { "time": 0.1,
+      "duration": 3,
+      "lines": [
+        "He! we started", 
+        "<i>&lt;start&gt;</i>"
+        ]
+    },
+    { "time": 10,
+      "duration": 8,
+      "lines": [
+        "Next cue, show 8 seconds", 
+        "<i>&lt;cue 2&gt;</i>"
+        ]
+    },
+    { "time": 20,
+      "lines": [
+        "No duration so show this till the next cue on 30s", 
+        "<i>&lt;cue 3&gt;</i>"
+        ]
+    },
+    { "time": 30,
+      "lines": [
+        "No duration so show till the end", 
+        "<i>&lt;cue 4&gt;</i>"
+        ]
+    }
+  ]
+}

@@ -55,16 +55,21 @@
       var playerEl = this;
       var sourceUrl = $(playerEl).attr("href")
       var mediaFormat = sourceUrl.slice(sourceUrl.length - 3, sourceUrl.length);
+      var configUrl = $(playerEl).data("configUrl");
+      if (!configUrl) {
+        configUrl = sourceUrl.replace("."+mediaFormat, ".json");
+      }
       // load the datafile belonging to the resource
-      $.getJSON(sourceUrl.replace("."+mediaFormat, ".json"))
+      $.getJSON(configUrl)
         .fail(function(jqXHR, status, reason){ 
           // TODO display error in player
         })
-        .done(function(config) { 
+        .done(function(configData) {
+          log(INFO, "Loaded " + configUrl + " with " + configData.cues.length + " cues");
           var instance = $.extend({
             url: sourceUrl,
             mediaFormat: mediaFormat
-          }, $.fn.qPlayer.defaults, config, $(playerEl).data());
+          }, $.fn.qPlayer.defaults, configData, $(playerEl).data());
           // enrich cues data by determining the end of each cue
           for (var index=0; index < instance.cues.length; index++) {
             var cue = instance.cues[index];
@@ -112,8 +117,10 @@
           var media = {};
           media[mediaFormat] = instance.url;
 
-          $(playerEl).jPlayer($.extend(instance.jPlayerOptions, {
+          $(playerEl).jPlayer($.extend({ supplied: mediaFormat }, instance.jPlayerOptions, {
             ready: function (event) {
+              log(DEBUG, "setting jPlayer media:");
+              log_raw(DEBUG, media);
               $(this).jPlayer("setMedia", media); 
             },
             timeupdate: function(event) {
