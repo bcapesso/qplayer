@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+  <title>Prayer test</title>
+
+  <link href="fonts/himalaya.css" rel="stylesheet" type="text/css" />
+  <link href="css/qplayer-default.css" rel="stylesheet" type="text/css" />
+  <link href="css/prayer.css" rel="stylesheet" type="text/css" />
+
+  <script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
+  <script type='text/javascript' src='js/jquery.jplayer.min.js'></script>
+  <script type='text/javascript' src='js/mustache.js'></script>
+  <script type='text/javascript' src='js/qplayer.js'></script>
+  
+  <script id="qPlayerTpl" type="text/template">
+    
+		<div id="{{playerId}}" class="captions">
+      <div class="jp-no-solution">
+        <span>Update Required</span>
+        To play the media you will need to either update your browser to a recent version or update your <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>.
+      </div>
+      <div class="line"></div>
+      <div class="jp-gui jp-interface">
+        <div class="jp-progress">
+          <div class="jp-seek-bar" title="Seek">
+            <div class="jp-play-bar"></div>
+          </div>
+        </div>
+        <div class="jp-current-time"></div>
+        <ul class="jp-controls">
+          <li><a href="javascript:;" class="jp-play" tabindex="1">play</a></li>
+          <li><a href="javascript:;" class="jp-pause" tabindex="1">pause</a></li>
+          <li><a href="javascript:;" class="jp-stop" tabindex="1">stop</a></li>
+          <li><a href="javascript:;" class="jp-volume-max" tabindex="1" title="max volume">max volume</a></li>
+        </ul>
+        <div class="jp-volume-bar" title="Volume">
+          <div class="jp-volume-bar-value"></div>
+        </div>
+				<ul class="jp-toggles">
+          <li><a href="javascript:;" class="jp-mute" tabindex="1" title="mute">mute</a></li>
+          <li><a href="javascript:;" class="jp-unmute" tabindex="1" title="unmute">unmute</a></li>
+          <li><a href="javascript:;" class="jp-repeat" tabindex="1" title="repeat">repeat</a></li>
+          <li><a href="javascript:;" class="jp-repeat-off" tabindex="1" title="repeat off">repeat off</a></li>
+          <li><a href="javascript:;" class="qp-tibetan" tabindex="1" title="tibetan">tibetan</a></li>
+          <li><a href="javascript:;" class="qp-tibetan-off" tabindex="1" title="tibetan off">tibetan off</a></li>
+        </ul>
+      </div>
+      {{#showDownload}}
+      <a class="download" href="{{url}}" title="download as {{mediaFormat}}">{{mediaFormat}}</a>
+      {{/showDownload}}
+		</div>
+    
+    
+  </script>
+  
+</head>
+<body>
+  
+  <!-- this is it. All you have to do is add a link to the mp3 with the class qPlayer.
+       The script will load the captions from the same file but with extension .json
+       If you dont have javascript, the .mp3 can still be downloaded
+  -->
+  <a class="qPlayer" href="prayer1.mp3">prayer1.mp3</a>
+  
+
+</body>
+</html>

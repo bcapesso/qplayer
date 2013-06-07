@@ -1,0 +1,126 @@
+/* 
+    Copyright 2013 Pathgate Institute
+*/
+
+.captions {
+  height: 150px;
+  width: 600px;
+  background-color: #ffff99;
+  text-align: center;
+  vertical-align: center;
+  border: 1px solid #000;
+  position: relative;
+}
+
+.captions > .line {
+  height: 20px;
+  vertical-align: middle;
+  margin-left: auto;
+  margin-right: auto;
+  display: none;
+  padding-top: 15px;
+}
+
+.line.hidden {
+  display: none !important;
+}
+
+div.jp-interface {
+	overflow:hidden;
+  width: 100%;
+	height: 30px;
+  position: absolute;
+  bottom: 0px;  
+  background-color: #ff6633;
+  
+}
+
+.jp-current-time, .jp-duration {
+	width: 40px;
+  font-size: 14px;
+  padding-top: 3px;
+}
+
+.jp-current-time {
+	float: left;
+}
+
+.jp-duration {
+	float: right;
+	text-align:right;
+}
+
+ul.jp-controls {
+	list-style-type:none;
+  display: inline-block;
+  margin: 0px 10px;
+  padding: 0px;
+  float: left;
+}
+
+ul.jp-controls > li {
+  display: inline-block;
+}
+
+ul.jp-toggles {
+  float: left;
+	list-style-type:none;
+	padding:0;
+	margin: 0px 10px;
+  padding: 0px;
+  overflow:hidden;
+  display: inline-block;
+}
+
+ul.jp-toggles > li {
+  display: inline-block;
+}
+
+.jp-progress {
+  width: 100%;
+	height: 5px;
+	padding: 0px;
+	margin: 0px;
+	overflow:hidden;
+}
+
+.jp-seek-bar {
+	background-color: #00ff00;
+	width:0px;
+	height: 100%;
+	overflow:hidden;
+	cursor:pointer;
+}
+
+.jp-play-bar {
+	background-color: #0000ff;
+	width:0px;
+	height: 100%;
+	overflow:hidden;
+}
+
+.jp-volume-bar {
+	background-color: #0f0;
+	position: relative;
+  top: 6px;
+  float: left;
+  width: 100px;
+	height: 8px;
+	padding: 0px;
+	overflow: hidden;
+}
+
+.jp-volume-bar:hover {
+	cursor:  pointer;
+}
+
+.jp-volume-bar-value {
+  background-color: #00f;
+  height: 8px;
+}
+
+.download {
+  position: absolute;
+  bottom: 5px;
+  right: 10px;
+}
