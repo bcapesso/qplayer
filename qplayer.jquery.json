@@ -2,7 +2,7 @@
   "name": "qplayer",
   "title": "Q Player",
   "description": "A plugin for jQuery and jPlayer to enable the synchronization of cue files",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "homepage": "https://github.com/pierreh/qplayer",
   "demo": "https://github.com/pierreh/qplayer/blob/master/example.html",
   "docs": "https://github.com/pierreh/qplayer/blob/master/example.html",
@@ -14,6 +14,7 @@
   "dependencies": {
     "jquery": ">=1.7.2"
   },
+  "keywords" : ["jPlayer", "closed captions", "captions", "subtitles", "lyrics", "time synchronization"],
   "licenses": [
     {
       "type": "Apache-2.0",
