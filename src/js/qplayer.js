@@ -1,9 +1,4 @@
-/**
- * 
- * A jQuery plugin to create a prayer player with text
- * 
- * Copyright 2013 Pathgate Institute
- */
+
 (function($, $wnd, $doc, $mustache) {
   
   "use strict";
