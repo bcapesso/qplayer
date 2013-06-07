@@ -13,6 +13,10 @@
   <script type='text/javascript' src='src/js/mustache.js'></script>
   <script type='text/javascript' src='src/js/qplayer.js'></script>
   
+  <script type="text/javascript">
+    $.fn.qPlayer.defaults.jPlayerOptions.swfPath = "src/js/"; // rectify this because plugin default is "js/"
+  </script>
+  
   <script id="qPlayerTpl" type="text/template">
     
 		<div id="{{playerId}}" class="qplayer_container">

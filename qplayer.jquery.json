@@ -2,7 +2,7 @@
   "name": "qplayer",
   "title": "Q Player",
   "description": "A plugin for jQuery and jPlayer to enable the synchronization of cue files",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "homepage": "https://github.com/pierreh/qplayer",
   "demo": "https://github.com/pierreh/qplayer/blob/master/example.html",
   "docs": "https://github.com/pierreh/qplayer/blob/master/example.html",
