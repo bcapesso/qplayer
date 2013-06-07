@@ -2,7 +2,7 @@
     Copyright 2013 Pathgate Institute
 */
 
-.captions {
+.qplayer_container {
   height: 150px;
   width: 600px;
   background-color: #ffff99;
@@ -12,7 +12,7 @@
   position: relative;
 }
 
-.captions > .line {
+.cue_line {
   height: 20px;
   vertical-align: middle;
   margin-left: auto;
@@ -21,8 +21,8 @@
   padding-top: 15px;
 }
 
-.line.hidden {
-  display: none !important;
+.cue_line.hidden > .content {
+  display: none;
 }
 
 div.jp-interface {
