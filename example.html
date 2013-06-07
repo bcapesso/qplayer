@@ -60,15 +60,16 @@
 </head>
 <body>
   
-  <!-- this is it. All you have to do is add a link to the mp3 with the class qPlayer.
+  <!-- 
+       All you have to do is add a link to the mp3 with the class qPlayer.
        The script will load the captions from the same file but with extension .json
-       If you dont have javascript, the .mp3 can still be downloaded
+       If you dont have javascript, the .mp3 can still be downloaded if you use an hyperlink.
   
-       if you leave out the data-config-url attribute qPlayer will automatically try and load the data
-       from the same location as the media url with the extension replaced by .json
-  
+       You can provide the data-config-url attribute and qPlayer will load the config data
+       from the that location instead.
   
   -->
+  
   <a class="qPlayer" 
      href="http://www.jplayer.org/audio/m4a/TSP-01-Cro_magnon_man.m4a"
      data-config-url="example.json" 

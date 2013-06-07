@@ -61,7 +61,8 @@
       }
       // load the datafile belonging to the resource
       $.getJSON(configUrl)
-        .fail(function(jqXHR, status, reason){ 
+        .fail(function(jqXHR, status, reason){
+          log(ERROR, "Failed to load " + configUrl + " : " + reason)
           // TODO display error in player
         })
         .done(function(configData) {
